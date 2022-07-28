@@ -1,5 +1,5 @@
 import { styled, Box } from '@mui/material';
-import Hero from './../../assets/images/Hero.jpg';
+import Hero from 'assets/images/Hero.jpg';
 
 export const HomeWrapper = styled(Box)(({ theme }) => ({
     background: `url(${Hero}) center no-repeat fixed`, 

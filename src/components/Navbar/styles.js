@@ -6,6 +6,9 @@ export const NavbarWrapper = styled(AppBar)(({ theme: { palette } }) => ({
   padding: '12px 45px',
   color: palette.common.white,
   textTransform: 'unset',
+  '@media only screen and (max-width: 950px)': {
+    padding: '12px 10px',
+  },
   a: {
     color: 'inherit',
   },
@@ -16,7 +19,7 @@ export const NavbarWrapper = styled(AppBar)(({ theme: { palette } }) => ({
     cursor: 'pointer',
     h3: {
       textTransform: 'capitalize',
-      fontSize: '1.2rem'
+      fontSize: '1.2rem',
     },
   },
   button: {
