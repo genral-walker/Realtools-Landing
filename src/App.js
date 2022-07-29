@@ -1,21 +1,13 @@
-import { GlobalStyles, ThemeProvider } from '@mui/material';
+import { ThemeProvider } from '@mui/material';
+import inputGlobalStyles from 'App.style';
 import THEME from 'constants/theme';
 import { Home } from 'pages';
+
 
 function App() {
   return (
     <ThemeProvider theme={THEME}>
-      <GlobalStyles
-        styles={{
-          '*, *::before, *::after': {
-            letterSpacing: '1px',
-          },
-          body: {
-            margin: 0,
-            padding: 0,
-          },
-        }}
-      />
+      {inputGlobalStyles}
       <Home />
     </ThemeProvider>
   );

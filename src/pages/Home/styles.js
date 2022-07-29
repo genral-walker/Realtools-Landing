@@ -60,9 +60,22 @@ export const HomeWrapper = styled(Box)(
       },
     },
 
+
+  main:{
+    color: palette.text.primary
+  },
     '.featured': {
-      background: 'green',
-      padding: '20px',
+      background: palette.common.white,
+      padding: '100px 20px',
+
+      h2 : {
+        fontSize: '35px',
+        fontWeight: 600,
+
+        '&+p': {
+          margin: '20px 17vw',
+        }
+      }
     },
   })
 );
