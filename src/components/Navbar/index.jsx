@@ -17,7 +17,7 @@ import { DynamicNavSection } from './DynamicNavSection';
 export const Navbar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const theme = useTheme();
-  const screenIsBelow870 = useMediaQuery(theme.breakpoints.down('870'));
+  const screenIsBelow1000 = useMediaQuery(theme.breakpoints.down('1000'));
 
   return (
     <>
@@ -34,7 +34,7 @@ export const Navbar = () => {
             </Button>
           </Stack>
           <Stack direction="row" spacing={1.5} ml="auto">
-            {screenIsBelow870 ? (
+            {screenIsBelow1000 ? (
               <IconButton
                 size="large"
                 edge="start"

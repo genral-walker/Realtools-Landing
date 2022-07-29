@@ -1,19 +1,30 @@
 import { Button, styled } from '@mui/material';
-import { lime } from '@mui/material/colors';
 
 export const ButtonWrapper = styled(Button)(
-  ({ theme: { palette }, displaytype }) => ({
+  ({ theme: { palette, breakpoints }, displaytype, buttonsize }) => ({
     background:
       displaytype === 'invert'
         ? palette.common.white
         : displaytype === 'secondary'
         ? palette.secondary.main
         : palette.primary.main,
-    color: palette.text.primary,
-    padding: '6px 20px',
+
+    color: palette.text.primary + ' !important',
+    padding:
+      buttonsize === 'small'
+        ? '5px 20px'
+        : buttonsize === 'large'
+        ? '15px 45px'
+        : '6px 25px',
+
     borderRadius: '5px',
+    textTransform: 'unset',
+    [breakpoints.down('360')]: {
+      fontSize: buttonsize === 'large' ? '13px' : '',
+    },
+
     '&:hover': {
-      backgroundColor: `${lime['A100']} !important`,
+      backgroundColor: '#f7d569 !important',
     },
   })
 );

@@ -20,7 +20,9 @@ export const DynamicNavSection = ({ shouldMobileShow }) => (
               <Button>Sell your Self Storage</Button>
               <Button>Free Evaluation</Button>
               <Button>Learn</Button>
-              <CustomButton displayType={'secondary'}>Contact</CustomButton>
+              <CustomButton displayType={'secondary'} size={'small'}>
+                Contact
+              </CustomButton>
             </Stack>
           </Box>
         </Toolbar>
@@ -31,7 +33,9 @@ export const DynamicNavSection = ({ shouldMobileShow }) => (
         <Button>Sell your Self Storage</Button>
         <Button>Free Evaluation</Button>
         <Button>Learn</Button>
-        <CustomButton displayType={'secondary'}>Contact</CustomButton>
+        <CustomButton displayType={'secondary'}>
+          Contact
+        </CustomButton>
       </>
     )}
   </>

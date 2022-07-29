@@ -1,5 +1,9 @@
 import { ButtonWrapper } from './styles';
 
-export const CustomButton = ({ children, displayType, size='medium' }) => {
-  return <ButtonWrapper size={size} displaytype={displayType}>{children}</ButtonWrapper>;
+export const CustomButton = ({ children, displayType, size, ...props }) => {
+  return (
+    <ButtonWrapper buttonsize={size} displaytype={displayType} {...props}>
+      {children}
+    </ButtonWrapper>
+  );
 };
