@@ -9,6 +9,7 @@ export const Home = () => {
   return (
     <HomeWrapper>
       <Navbar />
+
       <Box component="header" className="header">
         <Typography variant="h1" className="h1">
           Self Storage Business <br />
@@ -28,6 +29,12 @@ export const Home = () => {
             Active Self Storage Listings
           </CustomButton>
         </Stack>
+      </Box>
+
+      <Box component={'main'}>
+        <Box component={'section'} className='featured'>
+
+        </Box>
       </Box>
     </HomeWrapper>
   );
