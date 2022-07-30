@@ -1,5 +1,6 @@
 import { styled, Box } from '@mui/material';
 import Hero from 'assets/images/Hero.jpg';
+import activeBG from 'assets/images/listings-decorator.jpg';
 
 export const HomeWrapper = styled(Box)(
   ({ theme: { breakpoints, palette } }) => ({
@@ -63,35 +64,40 @@ export const HomeWrapper = styled(Box)(
     main: {
       color: palette.text.primary,
     },
+
     '.featured': {
       background: palette.common.white,
-      padding: '100px 20px',
+      padding: '100px 20px 20px',
 
-      h2: {
-        fontSize: '35px',
-        fontWeight: 600,
-
-        '&+p': {
-          margin: '20px 25vw',
-          [breakpoints.down('800')]: {
-            margin: '20px 15vw',
-          },
-          [breakpoints.down('570')]: {
-            margin: '20px 7vw',
-          },
-          [breakpoints.down('460')]: {
-            margin: '20px 0',
-          },
-        },
-      },
       '.swiper.swiper-initialized': {
         marginTop: '60px',
         paddingBottom: '75px',
         '.swiper-pagination-bullet': {
           width: '16px',
-          height: '16px'
+          height: '16px',
         },
       },
+    },
+
+    '.active-section': {
+      background: palette.common.white,
+      padding: '10px 5px 20px',
+      position: 'relative',
+      '&::after': {
+        content: '""',
+        position: 'absolute',
+        height: '90%',
+        width: '13%',
+        top: '10%',
+        right: '0',
+        background: `url(${activeBG}) top no-repeat`,
+        backgroundSize: 'cover'
+      },
+      form: {
+        margin: '40px auto',
+        position: 'relative',
+        zIndex: 300,
+      }
     },
   })
 );

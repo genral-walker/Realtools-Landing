@@ -1,10 +1,4 @@
-import {
-  CardActionArea,
-  CardContent,
-  CardMedia,
-  Stack,
-  Typography,
-} from '@mui/material';
+import { CardContent, CardMedia, Stack, Typography } from '@mui/material';
 import { CustomButton } from 'components';
 import { WareHouseDetailsWrapper } from './styles';
 
@@ -26,26 +20,26 @@ export const WareHouseDetails = (props) => {
       <CardContent>
         <Stack spacing={1}>
           <Stack direction="row" spacing={2} alignItems="center">
-            <HeadingIcon/>
+            <HeadingIcon />
             <Typography variant="h4">{header.name}</Typography>
           </Stack>
 
           <Stack direction="row" spacing={2}>
-            <Text2Icon  style={{ alignSelf: 'center' }}/>
+            <Text2Icon style={{ alignSelf: 'center' }} />
             <Typography variant="body2">
               {text2.name} &nbsp; {text2.nameValue}
             </Typography>
           </Stack>
 
           <Stack direction="row" spacing={2}>
-            <Text3Icon style={{ alignSelf: 'center' }}/>
+            <Text3Icon style={{ alignSelf: 'center' }} />
             <Typography variant="body2">
               {text3.name} &nbsp; {text3.nameValue}
             </Typography>
           </Stack>
 
           <Stack direction="row" spacing={2}>
-            <Text4Icon style={{ alignSelf: 'center' }}/>
+            <Text4Icon style={{ alignSelf: 'center' }} />
             <Typography variant="body2">
               {text4.name} &nbsp; {text4.nameValue}
             </Typography>
@@ -53,7 +47,7 @@ export const WareHouseDetails = (props) => {
         </Stack>
       </CardContent>
 
-      <Stack className='btn-container' alignItems='center'>
+      <Stack className="btn-container" alignItems="center">
         <CustomButton>{btnText}</CustomButton>
       </Stack>
     </WareHouseDetailsWrapper>

@@ -1,8 +1,14 @@
 import { Box, Stack, Typography, useTheme, useMediaQuery } from '@mui/material';
-import { CustomButton, Navbar, WareHouseDetails } from 'components';
+import {
+  CustomButton,
+  CustomHeading,
+  Form,
+  Navbar,
+  WareHouseDetails,
+} from 'components';
 import { wareHouseDetails } from 'data';
 import { HomeWrapper } from './styles';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/free-mode';
@@ -41,18 +47,22 @@ export const Home = () => {
 
       <Box component={'main'}>
         <Box component={'section'} className="featured">
-          <Typography variant="h2" align="center">
+          <CustomHeading variant="subHead" align="center">
             Featured Self Storages
-          </Typography>
-          <Typography variant="body2" align="center">
+          </CustomHeading>
+          <CustomHeading variant="subHeadText" align="center">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tortor
             sapien sagittis maecenas tincidunt. Quis pretium ornare
-          </Typography>
+          </CustomHeading>
 
           <Swiper
-            modules={[Navigation, Pagination, Scrollbar, A11y]}
+            modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
             spaceBetween={17}
             slidesPerView={1}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
             navigation
             pagination={{ clickable: true }}
             scrollbar={{ draggable: true }}
@@ -78,6 +88,18 @@ export const Home = () => {
               </SwiperSlide>
             ))}
           </Swiper>
+        </Box>
+
+        <Box component={'section'} className="active-section">
+          <CustomHeading variant="subHead" align="center">
+            Active Listing Self Storages
+          </CustomHeading>
+          <CustomHeading variant="subHeadText" align="center">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tortor
+            sapien sagittis maecenas tincidunt. Quis pretium ornare
+          </CustomHeading>
+
+          <Form />
         </Box>
       </Box>
     </HomeWrapper>
