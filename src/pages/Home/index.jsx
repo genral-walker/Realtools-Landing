@@ -1,14 +1,12 @@
-import {
-  Box,
-  Stack,
-  Typography,
-  useTheme,
-  useMediaQuery,
-  Grid,
-} from '@mui/material';
+import { Box, Stack, Typography, useTheme, useMediaQuery } from '@mui/material';
 import { CustomButton, Navbar, WareHouseDetails } from 'components';
 import { wareHouseDetails } from 'data';
 import { HomeWrapper } from './styles';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/pagination';
 
 export const Home = () => {
   const theme = useTheme();
@@ -51,13 +49,35 @@ export const Home = () => {
             sapien sagittis maecenas tincidunt. Quis pretium ornare
           </Typography>
 
-          <Grid container spacing={2}>
-            {wareHouseDetails.map((wareHouse) => (
-              <Grid item sm={6} md={4} lg={3}>
-                <WareHouseDetails bg {...wareHouse} />
-              </Grid>
+          <Swiper
+            modules={[Navigation, Pagination, Scrollbar, A11y]}
+            spaceBetween={17}
+            slidesPerView={1}
+            navigation
+            pagination={{ clickable: true }}
+            scrollbar={{ draggable: true }}
+            breakpoints={{
+              [theme.breakpoints.values.sm]: {
+                slidesPerView: 2,
+              },
+              [theme.breakpoints.values.md]: {
+                slidesPerView: 3,
+              },
+              [theme.breakpoints.values.lg]: {
+                slidesPerView: 4,
+              },
+            }}
+          >
+            {wareHouseDetails.map((wareHouse, idx) => (
+              <SwiperSlide key={idx}>
+                <WareHouseDetails
+                  bg="true"
+                  {...wareHouse}
+                  style={{ width: '300px', height: '300px' }}
+                />
+              </SwiperSlide>
             ))}
-          </Grid>
+          </Swiper>
         </Box>
       </Box>
     </HomeWrapper>

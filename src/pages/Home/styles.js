@@ -45,7 +45,7 @@ export const HomeWrapper = styled(Box)(
           fontSize: '15px',
         },
       },
-      
+
       '.btns': {
         marginBottom: '145px',
         [breakpoints.down('1050')]: {
@@ -60,22 +60,38 @@ export const HomeWrapper = styled(Box)(
       },
     },
 
-
-  main:{
-    color: palette.text.primary
-  },
+    main: {
+      color: palette.text.primary,
+    },
     '.featured': {
       background: palette.common.white,
       padding: '100px 20px',
 
-      h2 : {
+      h2: {
         fontSize: '35px',
         fontWeight: 600,
 
         '&+p': {
-          margin: '20px 17vw',
-        }
-      }
+          margin: '20px 25vw',
+          [breakpoints.down('800')]: {
+            margin: '20px 15vw',
+          },
+          [breakpoints.down('570')]: {
+            margin: '20px 7vw',
+          },
+          [breakpoints.down('460')]: {
+            margin: '20px 0',
+          },
+        },
+      },
+      '.swiper.swiper-initialized': {
+        marginTop: '60px',
+        paddingBottom: '75px',
+        '.swiper-pagination-bullet': {
+          width: '16px',
+          height: '16px'
+        },
+      },
     },
   })
 );

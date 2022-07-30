@@ -16,17 +16,16 @@ export const WareHouseDetailsWrapper = styled(Card)(
     '.MuiCardContent-root': {
       paddingTop: 0,
       h4: {
-        fontSize: '25px',
+        fontSize: '23px',
         fontWeight: 600,
       },
     },
-    '.MuiButtonBase-root.MuiCardActionArea-root': {
-      display: 'flex',
+    '.btn-container': {
       button: {
         color: palette.common.white + ' !important',
         fontSize: '13px !important',
-      width:'70%'
-      }
+        width: '70%',
+      },
     },
   })
 );

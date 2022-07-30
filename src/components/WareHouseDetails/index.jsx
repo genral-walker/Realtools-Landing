@@ -53,9 +53,9 @@ export const WareHouseDetails = (props) => {
         </Stack>
       </CardContent>
 
-      <CardActionArea>
+      <Stack className='btn-container' alignItems='center'>
         <CustomButton>{btnText}</CustomButton>
-      </CardActionArea>
+      </Stack>
     </WareHouseDetailsWrapper>
   );
 };
