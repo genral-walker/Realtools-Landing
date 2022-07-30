@@ -14,7 +14,7 @@ export const ButtonWrapper = styled(Button)(
       buttonsize === 'small'
         ? '5px 20px'
         : buttonsize === 'large'
-        ? '15px 45px'
+        ? '15px 55px'
         : '6px 25px',
 
     borderRadius: '5px',

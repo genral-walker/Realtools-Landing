@@ -70,7 +70,7 @@ export const HomeWrapper = styled(Box)(
       padding: '100px 20px 20px',
 
       '.swiper.swiper-initialized': {
-        marginTop: '60px',
+        margin: '60px 20px 60px',
         paddingBottom: '75px',
         '.swiper-pagination-bullet': {
           width: '16px',
@@ -81,7 +81,7 @@ export const HomeWrapper = styled(Box)(
 
     '.active-section': {
       background: palette.common.white,
-      padding: '10px 5px 20px',
+      padding: '10px 5px 0',
       position: 'relative',
       '&::after': {
         content: '""',
@@ -91,13 +91,24 @@ export const HomeWrapper = styled(Box)(
         top: '10%',
         right: '0',
         background: `url(${activeBG}) top no-repeat`,
-        backgroundSize: 'cover'
+        backgroundSize: 'cover',
       },
+
       form: {
         margin: '40px auto',
         position: 'relative',
         zIndex: 300,
-      }
+      },
+
+      '.MuiGrid-root.MuiGrid-container': {
+        margin: '30px 5px 0 28px',
+        width: '85%'
+      },
     },
+
+    '.active-extended': {
+      background: palette.common.white + ' !important',
+      padding:'60px 0 70px'
+    }
   })
 );

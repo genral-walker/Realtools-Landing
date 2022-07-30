@@ -10,7 +10,7 @@ import { CustomButton } from 'components';
 
 export const Form = () => {
   return (
-    <FormWrapper elevation={2} component={'form'}>
+    <FormWrapper component={'form'}>
       <FormControl required>
         <Stack spacing={2} direction="row">
           <FormControlLabel

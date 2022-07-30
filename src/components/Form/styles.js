@@ -5,6 +5,7 @@ export const FormWrapper = styled(Card)(({ theme: { palette } }) => ({
     width: 'max-content',
     padding: '20px 25px 30px 10px',
     borderRadius: '15px',
+    boxShadow: '0px 5px 50px rgba(1, 31, 109, 0.1)'
   },
   label: {
     '&:first-of-type': {

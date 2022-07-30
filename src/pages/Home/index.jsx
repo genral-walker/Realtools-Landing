@@ -1,4 +1,11 @@
-import { Box, Stack, Typography, useTheme, useMediaQuery } from '@mui/material';
+import {
+  Box,
+  Stack,
+  Typography,
+  useTheme,
+  useMediaQuery,
+  Grid,
+} from '@mui/material';
 import {
   CustomButton,
   CustomHeading,
@@ -100,7 +107,19 @@ export const Home = () => {
           </CustomHeading>
 
           <Form />
+
+          <Grid container spacing={2}>
+            {wareHouseDetails.map((wareHouse, idx) => (
+              <Grid key={idx} item sm={6} md={4}>
+                <WareHouseDetails {...wareHouse} boxShadow />
+              </Grid>
+            ))}
+          </Grid>
         </Box>
+
+        <Stack alignItems={'center'} className='active-extended'>
+          <CustomButton displayType={'secondary'} size='large'>View More Listings</CustomButton>
+        </Stack>
       </Box>
     </HomeWrapper>
   );
