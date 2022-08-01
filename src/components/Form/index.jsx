@@ -12,7 +12,7 @@ export const Form = () => {
   return (
     <FormWrapper component={'form'}>
       <FormControl required>
-        <Stack spacing={2} direction="row">
+        <Stack spacing={{ md: 2, xs: 2.3 }} direction={{ md: 'row', xs: 'column' }}>
           <FormControlLabel
             label="Location"
             labelPlacement="top"

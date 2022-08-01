@@ -70,7 +70,7 @@ export const HomeWrapper = styled(Box)(
       padding: '100px 20px 20px',
 
       '.swiper.swiper-initialized': {
-        margin: '60px 20px 60px',
+        margin: '60px 20px 0',
         paddingBottom: '75px',
         '.swiper-pagination-bullet': {
           width: '16px',
@@ -81,34 +81,76 @@ export const HomeWrapper = styled(Box)(
 
     '.active-section': {
       background: palette.common.white,
-      padding: '10px 5px 0',
+      padding: '10px 0 0',
       position: 'relative',
       '&::after': {
         content: '""',
         position: 'absolute',
-        height: '90%',
+        height: 'calc(100% - 23px)',
         width: '13%',
-        top: '10%',
+        top: '23px',
         right: '0',
         background: `url(${activeBG}) top no-repeat`,
         backgroundSize: 'cover',
+
+        [breakpoints.down('1250')]: {
+          width: '12.5%',
+        },
+        [breakpoints.down('1050')]: {
+          width: '11.8%',
+        },
+        [breakpoints.down('800')]: {
+          top: '33px',
+          height: 'calc(100% - 33px)',
+        },
+        [breakpoints.down('750')]: {
+          width: '10.8%',
+        },
+        [breakpoints.down('650')]: {
+          width: '10%',
+        },
+        [breakpoints.down('sm')]: {
+          display: 'none',
+        },
       },
 
       form: {
         margin: '40px auto',
         position: 'relative',
         zIndex: 300,
+        [breakpoints.between('1400', '1600')]: {
+          transform: 'translateX(-70px)',
+        },
+        [breakpoints.down('md')]: {
+          width: '78% !important',
+        },
+        [breakpoints.down('sm')]: {
+          width: 'unset !important',
+          margin: '40px 25px 30px !important',
+        },
       },
 
-      '.MuiGrid-root.MuiGrid-container': {
+      '.MuiGrid-root.MuiGrid-container, .active-extended': {
         margin: '30px 5px 0 28px',
-        width: '85%'
+        width: '85%',
+        [breakpoints.down('sm')]: {
+          width: '100% !important',
+          margin: '0',
+          padding: '0 25px',
+        },
       },
     },
 
     '.active-extended': {
       background: palette.common.white + ' !important',
-      padding:'60px 0 70px'
-    }
+      margin: 'unset !important',
+      padding: '60px 0 70px !important',
+      button: {
+        marginLeft: '40px',
+        [breakpoints.down('sm')]: {
+          margin: '0',
+        },
+      },
+    },
   })
 );

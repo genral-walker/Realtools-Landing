@@ -108,18 +108,20 @@ export const Home = () => {
 
           <Form />
 
-          <Grid container spacing={2}>
+          <Grid container rowSpacing={{ xs: 3, sm: 2 }} columnSpacing={{ xs: 0, sm: 2 }}>
             {wareHouseDetails.map((wareHouse, idx) => (
-              <Grid key={idx} item sm={6} md={4}>
+              <Grid key={idx} item xs={12} sm={6} md={4}>
                 <WareHouseDetails {...wareHouse} boxShadow />
               </Grid>
             ))}
           </Grid>
-        </Box>
 
-        <Stack alignItems={'center'} className='active-extended'>
-          <CustomButton displayType={'secondary'} size='large'>View More Listings</CustomButton>
-        </Stack>
+          <Stack alignItems={'center'} className="active-extended">
+            <CustomButton displayType={'secondary'} size="large">
+              View More Listings
+            </CustomButton>
+          </Stack>
+        </Box>
       </Box>
     </HomeWrapper>
   );

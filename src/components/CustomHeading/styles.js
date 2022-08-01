@@ -14,11 +14,9 @@ export const HeadingWrapper = styled(Typography)(
         [breakpoints.down('800')]: {
           margin: '20px 15vw',
         },
-        [breakpoints.down('570')]: {
-          margin: '20px 7vw',
-        },
-        [breakpoints.down('460')]: {
-          margin: '20px 0',
+        [breakpoints.down('sm')]: {
+          width: '92%',
+          margin: '20px auto',
         },
       };
     } else {
