@@ -21,6 +21,7 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 import sellHero from 'assets/images/sell-hero.svg';
+import buyHero from 'assets/images/buy-hero.svg';
 
 export const Home = () => {
   const theme = useTheme();
@@ -116,7 +117,7 @@ export const Home = () => {
           >
             {wareHouseDetails.map((wareHouse, idx) => (
               <Grid key={idx} item xs={12} sm={6} md={4}>
-                <WareHouseDetails {...wareHouse} boxShadow='true' />
+                <WareHouseDetails {...wareHouse} boxShadow="true" />
               </Grid>
             ))}
           </Grid>
@@ -144,6 +145,23 @@ export const Home = () => {
             <img src={sellHero} alt="Sell your storage image" />
           </Stack>
         </Box>
+
+        <Stack component={'section'} className="buy-section" direction="row">
+          <img src={buyHero} alt="Sell your storage image" />
+          <Box>
+            <CustomHeading variant="subHead">
+            Do you want to buy a Self Storage?
+            </CustomHeading>
+            <Typography variant="body2">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              tortor sapien sagittis maecenas tincidunt. Quis pretium ornare id
+              diam amet proin scelerisque nunc.
+            </Typography>
+            <CustomButton>Sell Your Self Storage</CustomButton>
+          </Box>
+        </Stack>
+
+
       </Box>
     </HomeWrapper>
   );

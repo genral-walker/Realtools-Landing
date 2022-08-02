@@ -173,7 +173,7 @@ export const HomeWrapper = styled(Box)(
           borderRadius: '0',
           flexDirection: 'column',
           justifyContent: 'center !important',
-          alignContent: 'center !important'
+          alignContent: 'center !important',
         },
         [breakpoints.down('sm')]: {
           padding: '60px 25px 0',
@@ -219,6 +219,71 @@ export const HomeWrapper = styled(Box)(
           width: '80%',
           alignSelf: 'center',
           margin: '15px 0 0',
+        },
+      },
+    },
+
+
+
+    '.buy-section': {
+      background: palette.common.white,
+      height: '700px',
+
+      [breakpoints.down('lg')]: {
+        height: '550px',
+      },
+      [breakpoints.down('1100')]: {
+        paddingRight: '40px'
+      },
+      [breakpoints.down('900')]: {
+        height: '500px',
+      },
+      [breakpoints.down('720')]: {
+        padding: '60px 40px 0',
+        height: 'max-content',
+        flexDirection: 'column',
+      },
+      [breakpoints.down('sm')]: {
+        padding: '60px 25px 0',
+      },
+
+      '& > div': {
+        alignSelf: 'center',
+        marginLeft: '50px',
+        [breakpoints.down('lg')]: {
+          marginLeft: '40px',
+        },
+        [breakpoints.down('1100')]: {
+          marginLeft: '0',
+        },
+        h2: {
+          fontWeight: 700,
+        },
+        p: {
+          margin: '10px 0 25px',
+          width: '70%',
+          [breakpoints.down('lg')]: {
+            width: '100%',
+          },
+        },
+      },
+      button: {
+        color: palette.common.white + ' !important',
+      },
+      img: {
+        width: '550px',
+        alignSelf: 'flex-end',
+        [breakpoints.down('lg')]: {
+          width: '500px',
+        },
+        [breakpoints.down('900')]: {
+          width: '400px',
+        },
+        [breakpoints.down('720')]: {
+          width: '80%',
+          alignSelf: 'center',
+          margin: '15px 0 0',
+          order: 2
         },
       },
     },
