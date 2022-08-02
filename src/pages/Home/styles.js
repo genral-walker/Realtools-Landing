@@ -145,7 +145,7 @@ export const HomeWrapper = styled(Box)(
     '.active-extended': {
       background: palette.common.white + ' !important',
       margin: 'unset !important',
-      padding: '60px 0 70px !important',
+      padding: '60px 0 50px !important',
       button: {
         marginLeft: '40px',
         [breakpoints.down('sm')]: {
@@ -161,27 +161,65 @@ export const HomeWrapper = styled(Box)(
         borderRadius: '0px 0px 300px 0px',
         overflow: 'hidden',
         height: '700px',
+        [breakpoints.down('lg')]: {
+          height: '550px',
+        },
+        [breakpoints.down('900')]: {
+          height: '500px',
+        },
+        [breakpoints.down('720')]: {
+          padding: '60px 40px 0',
+          height: 'max-content',
+          borderRadius: '0',
+          flexDirection: 'column',
+          justifyContent: 'center !important',
+          alignContent: 'center !important'
+        },
+        [breakpoints.down('sm')]: {
+          padding: '60px 25px 0',
+        },
 
         '& > div': {
           alignSelf: 'center',
           marginLeft: '50px',
+          [breakpoints.down('lg')]: {
+            marginLeft: '40px',
+          },
+          [breakpoints.down('720')]: {
+            marginLeft: '0',
+          },
           h2: {
-            fontWeight: 700
+            fontWeight: 700,
           },
           p: {
             margin: '10px 0 25px',
-            width: '70%'
-          }
-
-        }
+            width: '70%',
+            [breakpoints.down('lg')]: {
+              width: '100%',
+            },
+          },
+        },
       },
-      button:{
+      button: {
         color: palette.common.white + ' !important',
       },
       img: {
         width: '550px',
         alignSelf: 'flex-end',
         marginRight: '80px',
+        [breakpoints.down('lg')]: {
+          width: '500px',
+          marginRight: '40px',
+        },
+        [breakpoints.down('900')]: {
+          width: '400px',
+          marginRight: '30px',
+        },
+        [breakpoints.down('720')]: {
+          width: '80%',
+          alignSelf: 'center',
+          margin: '15px 0 0',
+        },
       },
     },
   })
