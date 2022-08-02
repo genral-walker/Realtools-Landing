@@ -28,6 +28,7 @@ export const NavbarWrapper = styled(AppBar)(
     button: {
       textTransform: 'inherit',
       color: 'inherit',
+      padding:'4px 17px',
       '&:hover': {
         backgroundColor: '#f7d569',
         color: palette.text.primary,

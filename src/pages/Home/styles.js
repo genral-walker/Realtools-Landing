@@ -1,6 +1,7 @@
 import { styled, Box } from '@mui/material';
 import Hero from 'assets/images/Hero.jpg';
 import activeBG from 'assets/images/listings-decorator.jpg';
+import featuredBGDecorator from 'assets/images/featured-bg-decorator.svg';
 
 export const HomeWrapper = styled(Box)(
   ({ theme: { breakpoints, palette } }) => ({
@@ -150,6 +151,37 @@ export const HomeWrapper = styled(Box)(
         [breakpoints.down('sm')]: {
           margin: '0',
         },
+      },
+    },
+
+    '.sell-section': {
+      background: palette.common.white,
+      '& > div': {
+        background: '#E8EFFF',
+        borderRadius: '0px 0px 300px 0px',
+        overflow: 'hidden',
+        height: '700px',
+
+        '& > div': {
+          alignSelf: 'center',
+          marginLeft: '50px',
+          h2: {
+            fontWeight: 700
+          },
+          p: {
+            margin: '10px 0 25px',
+            width: '70%'
+          }
+
+        }
+      },
+      button:{
+        color: palette.common.white + ' !important',
+      },
+      img: {
+        width: '550px',
+        alignSelf: 'flex-end',
+        marginRight: '80px',
       },
     },
   })

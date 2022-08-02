@@ -20,6 +20,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
+import sellHero from 'assets/images/sell-hero.svg';
 
 export const Home = () => {
   const theme = useTheme();
@@ -108,10 +109,14 @@ export const Home = () => {
 
           <Form />
 
-          <Grid container rowSpacing={{ xs: 3, sm: 2 }} columnSpacing={{ xs: 0, sm: 2 }}>
+          <Grid
+            container
+            rowSpacing={{ xs: 3, sm: 2 }}
+            columnSpacing={{ xs: 0, sm: 2 }}
+          >
             {wareHouseDetails.map((wareHouse, idx) => (
               <Grid key={idx} item xs={12} sm={6} md={4}>
-                <WareHouseDetails {...wareHouse} boxShadow />
+                <WareHouseDetails {...wareHouse} boxShadow='true' />
               </Grid>
             ))}
           </Grid>
@@ -120,6 +125,23 @@ export const Home = () => {
             <CustomButton displayType={'secondary'} size="large">
               View More Listings
             </CustomButton>
+          </Stack>
+        </Box>
+
+        <Box component={'section'} className="sell-section">
+          <Stack direction="row">
+            <Box>
+              <CustomHeading variant="subHead">
+                Do you have a Self Storage for Sale?
+              </CustomHeading>
+              <Typography variant="body2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                tortor sapien sagittis maecenas tincidunt. Quis pretium ornare
+                id diam amet proin scelerisque nunc.
+              </Typography>
+              <CustomButton>Sell Your Self Storage</CustomButton>
+            </Box>
+            <img src={sellHero} alt="Sell your storage image" />
           </Stack>
         </Box>
       </Box>
