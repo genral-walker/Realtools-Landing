@@ -1,7 +1,6 @@
 import { styled, Box } from '@mui/material';
 import Hero from 'assets/images/Hero.jpg';
 import activeBG from 'assets/images/listings-decorator.jpg';
-import featuredBGDecorator from 'assets/images/featured-bg-decorator.svg';
 
 export const HomeWrapper = styled(Box)(
   ({ theme: { breakpoints, palette } }) => ({
@@ -19,6 +18,10 @@ export const HomeWrapper = styled(Box)(
       marginTop: '80px',
       [breakpoints.down('900')]: {
         marginTop: '40px',
+      },
+      [breakpoints.between('363', '393')]: {
+        paddingLeft: '15px',
+        paddingRight: '15px',
       },
 
       '.h1': {
@@ -223,17 +226,14 @@ export const HomeWrapper = styled(Box)(
       },
     },
 
-
-
     '.buy-section': {
-      background: palette.common.white,
       height: '700px',
 
       [breakpoints.down('lg')]: {
         height: '550px',
       },
       [breakpoints.down('1100')]: {
-        paddingRight: '40px'
+        paddingRight: '40px',
       },
       [breakpoints.down('900')]: {
         height: '500px',
@@ -283,7 +283,50 @@ export const HomeWrapper = styled(Box)(
           width: '80%',
           alignSelf: 'center',
           margin: '15px 0 0',
-          order: 2
+          order: 2,
+        },
+      },
+    },
+
+    '.learn-section': {
+      background: '#1849C6',
+      borderRadius: '300px 0px 0px 0px',
+      padding: '90px 40px 60px',
+      marginTop: '-11%',
+      position: 'relative',
+      zIndex: 600,
+
+      [breakpoints.down('580')]: {
+        borderRadius: '0',
+      },
+      [breakpoints.down('380')]: {
+        padding: '90px 25px 60px',
+      },
+      [breakpoints.down('340')]: {
+        padding: '90px 20px 60px',
+      },
+      'h2, p': {
+        color: palette.common.white,
+        textAlign: 'center',
+        margin: '0 auto',
+        width: '70%',
+        [breakpoints.down('650')]: {
+          width: '75%',
+        },
+        [breakpoints.down('580')]: {
+          width: '100%',
+        },
+      },
+      h2: {
+        lineHeight: '50px',
+      },
+      p: {
+        lineHeight: '30px',
+        margin: '20px auto',
+      },
+      button: {
+        [breakpoints.down('345')]: {
+          padding: '15px 30px !important',
         },
       },
     },

@@ -4,3 +4,4 @@ export * from './CustomDrawer';
 export * from './WareHouseDetails';
 export * from './CustomHeading';
 export * from './Form';
+export * from './LearnDetails';

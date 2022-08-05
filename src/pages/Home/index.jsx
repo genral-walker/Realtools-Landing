@@ -10,10 +10,11 @@ import {
   CustomButton,
   CustomHeading,
   Form,
+  LearnDetails,
   Navbar,
   WareHouseDetails,
 } from 'components';
-import { wareHouseDetails } from 'data';
+import { learnDetails, wareHouseDetails } from 'data';
 import { HomeWrapper } from './styles';
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -146,22 +147,56 @@ export const Home = () => {
           </Stack>
         </Box>
 
-        <Stack component={'section'} className="buy-section" direction="row">
-          <img src={buyHero} alt="Sell your storage image" />
-          <Box>
-            <CustomHeading variant="subHead">
-            Do you want to buy a Self Storage?
+        <Box sx={{ backgroundColor: 'white' }}>
+          <Stack component={'section'} className="buy-section" direction="row">
+            <img src={buyHero} alt="Sell your storage image" />
+            <Box>
+              <CustomHeading variant="subHead">
+                Do you want to buy a Self Storage?
+              </CustomHeading>
+              <Typography variant="body2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                tortor sapien sagittis maecenas tincidunt. Quis pretium ornare
+                id diam amet proin scelerisque nunc.
+              </Typography>
+              <CustomButton>Sell Your Self Storage</CustomButton>
+            </Box>
+          </Stack>
+
+          <Box component={'section'} className="learn-section">
+            <CustomHeading variant={'subHead'}>
+              Learn Everything About Buying, Selling, and Operating a Self
+              Storage
             </CustomHeading>
             <Typography variant="body2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              tortor sapien sagittis maecenas tincidunt. Quis pretium ornare id
-              diam amet proin scelerisque nunc.
+              Learn about literally anything to know about Selling or Buying a
+              Self Storage
             </Typography>
-            <CustomButton>Sell Your Self Storage</CustomButton>
+
+            <Grid
+              container
+              spacing={3}
+              sx={{
+                p: {
+                  xs: '50px 0px',
+                  md: '50px 30px',
+                },
+              }}
+            >
+              {learnDetails.map((learnDetail, idx) => (
+                <Grid item key={idx} sx={12} sm={6} lg={3}>
+                  <LearnDetails {...learnDetail} />
+                </Grid>
+              ))}
+            </Grid>
+
+            <Stack direction={'row'} justifyContent={'center'}>
+              <CustomButton displayType={'secondary'} size={'large'}>
+                Explore the Learning Section
+              </CustomButton>
+            </Stack>
           </Box>
-        </Stack>
-
-
+        </Box>
       </Box>
     </HomeWrapper>
   );

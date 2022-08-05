@@ -28,6 +28,7 @@ export const WareHouseDetailsWrapper = styled(Card)(
         color: palette.common.white + ' !important',
         fontSize: '13px !important',
         width: '70%',
+        borderRadius: '10px'
       },
     },
   })

@@ -10,6 +10,15 @@ import { ReactComponent as PropertyIcon } from 'assets/icons/property.svg';
 import { ReactComponent as OccupancyIcon } from 'assets/icons/people.svg';
 import { ReactComponent as SizeSquareIcon } from 'assets/icons/size-square.svg';
 
+import learn1 from 'assets/images/learn.jpg';
+import learn2 from 'assets/images/learn-2.jpg';
+import learn3 from 'assets/images/learn-3.jpg';
+
+import { ReactComponent as TimeIcon } from 'assets/icons/clock.svg';
+import { ReactComponent as TagIcon } from 'assets/icons/tag.svg';
+import { ReactComponent as ProfileIcon } from 'assets/icons/profile.svg';
+
+
 export const wareHouseDetails = [
   {
     img: wareHouseListing1,
@@ -148,5 +157,48 @@ export const wareHouseDetails = [
       icon: SizeSquareIcon,
     },
     btnText: 'View More Detail',
+  },
+];
+
+export const learnDetails = [
+  {
+    img: learn1,
+    title: 'Everything you need to know about how to buy a Self Storage',
+    icons: [
+      { icon: TimeIcon, text: '5hrs ago' },
+      { icon: TagIcon, text: 'Buy' },
+      { icon: ProfileIcon, text: 'Raza' },
+    ],
+    btnText: 'Read More',
+  },
+  {
+    img: learn2,
+    title: 'Everything you need to know about how to buy a Self Storage',
+    icons: [
+      { icon: TimeIcon, text: '5hrs ago' },
+      { icon: TagIcon, text: 'Sell' },
+      { icon: ProfileIcon, text: 'Raza' },
+    ],
+    btnText: 'Read More',
+  },
+  {
+    img: learn3,
+    title: 'Everything you need to know about how to buy a Self Storage',
+    icons: [
+      { icon: TimeIcon, text: '5hrs ago' },
+      { icon: TagIcon, text: 'Operate' },
+      { icon: ProfileIcon, text: 'Raza' },
+    ],
+    btnText: 'Read More',
+  },
+  {
+    img: learn1,
+    title: 'Everything you need to know about how to buy a Self Storage',
+    icons: [
+      { icon: TimeIcon, text: '5hrs ago' },
+      { icon: TagIcon, text: 'Buy' },
+      { icon: ProfileIcon, text: 'Raza' },
+    ],
+    btnText: 'Read More',
   },
 ];
