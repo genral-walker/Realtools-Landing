@@ -13,6 +13,10 @@ export const LearnDetailsWrapper = styled(Card)(
       [breakpoints.down('sm')]: {
         width: '94%',
       },
+      [breakpoints.down('425')]: {
+        margin: '0 auto 17px',
+        width: '100%',
+      },
     },
 
     '.MuiCardContent-root': {

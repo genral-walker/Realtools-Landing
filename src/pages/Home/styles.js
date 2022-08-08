@@ -221,7 +221,10 @@ export const HomeWrapper = styled(Box)(
         [breakpoints.down('720')]: {
           width: '80%',
           alignSelf: 'center',
-          margin: '15px 0 0',
+          margin: '30px 0 0',
+        },
+        [breakpoints.down('450')]: {
+          margin: '40px 0 0',
         },
       },
     },
@@ -275,15 +278,21 @@ export const HomeWrapper = styled(Box)(
         alignSelf: 'flex-end',
         [breakpoints.down('lg')]: {
           width: '500px',
+          transform: 'translateX(20px)',
         },
         [breakpoints.down('900')]: {
           width: '400px',
+          transform: 'translateX(10px)',
         },
         [breakpoints.down('720')]: {
           width: '80%',
+          transform: 'translateX(0)',
           alignSelf: 'center',
-          margin: '15px 0 0',
+          margin: '30px 0 0',
           order: 2,
+        },
+        [breakpoints.down('450')]: {
+          margin: '40px 0 0',
         },
       },
     },
@@ -296,6 +305,12 @@ export const HomeWrapper = styled(Box)(
       position: 'relative',
       zIndex: 600,
 
+      [breakpoints.down('1000')]: {
+        borderRadius: '180px 0px 0px 0px',
+      },
+      [breakpoints.down('800')]: {
+        borderRadius: '150px 0px 0px 0px',
+      },
       [breakpoints.down('580')]: {
         borderRadius: '0',
       },
