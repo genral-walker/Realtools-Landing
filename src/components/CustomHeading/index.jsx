@@ -5,7 +5,7 @@ export const CustomHeading = ({ variant, children, ...props }) => {
     <HeadingWrapper
       varianttype={variant}
       variant={
-        variant === 'subHead' ? 'h2' : variant === 'subHeadText' ? 'body2' : ''
+        variant === 'subHead' ? 'h2' : variant === 'subHeadText' ? 'body1' : ''
       }
       {...props}
     >

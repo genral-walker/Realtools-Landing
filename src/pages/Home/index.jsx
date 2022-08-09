@@ -8,6 +8,7 @@ import {
 } from '@mui/material';
 import {
   CustomButton,
+  CustomCTA,
   CustomHeading,
   Form,
   LearnDetails,
@@ -23,6 +24,7 @@ import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 import sellHero from 'assets/images/sell-hero.svg';
 import buyHero from 'assets/images/buy-hero.svg';
+import { ReactComponent as RightArrowIcon } from 'assets/icons/arrow.svg';
 
 export const Home = () => {
   const theme = useTheme();
@@ -136,7 +138,7 @@ export const Home = () => {
               <CustomHeading variant="subHead">
                 Do you have a Self Storage for Sale?
               </CustomHeading>
-              <Typography variant="body2">
+              <Typography variant="body1">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
                 tortor sapien sagittis maecenas tincidunt. Quis pretium ornare
                 id diam amet proin scelerisque nunc.
@@ -154,7 +156,7 @@ export const Home = () => {
               <CustomHeading variant="subHead">
                 Do you want to buy a Self Storage?
               </CustomHeading>
-              <Typography variant="body2">
+              <Typography variant="body1">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
                 tortor sapien sagittis maecenas tincidunt. Quis pretium ornare
                 id diam amet proin scelerisque nunc.
@@ -168,7 +170,7 @@ export const Home = () => {
               Learn Everything About Buying, Selling, and Operating a Self
               Storage
             </CustomHeading>
-            <Typography variant="body2">
+            <Typography variant="body1">
               Learn about literally anything to know about Selling or Buying a
               Self Storage
             </Typography>
@@ -184,7 +186,7 @@ export const Home = () => {
               }}
             >
               {learnDetails.map((learnDetail, idx) => (
-                <Grid item key={idx} sx={12} sm={6} lg={3}>
+                <Grid item key={idx} xs={12} sm={6} lg={3}>
                   <LearnDetails {...learnDetail} />
                 </Grid>
               ))}
@@ -195,6 +197,15 @@ export const Home = () => {
                 Explore the Learning Section
               </CustomButton>
             </Stack>
+          </Box>
+
+          <Box component={'section'} className="cta">
+            <CustomCTA
+              heading="Any Queries? Reach Out to Us"
+              text="Feel free to write to us, we are happy to help you"
+              btnText="Write to Us"
+              btnRightIcon={RightArrowIcon}
+            />
           </Box>
         </Box>
       </Box>

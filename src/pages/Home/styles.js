@@ -1,6 +1,7 @@
 import { styled, Box } from '@mui/material';
 import Hero from 'assets/images/Hero.jpg';
 import activeBG from 'assets/images/listings-decorator.jpg';
+import queriesBG from 'assets/icons/queries-bg.svg';
 
 export const HomeWrapper = styled(Box)(
   ({ theme: { breakpoints, palette } }) => ({
@@ -345,5 +346,23 @@ export const HomeWrapper = styled(Box)(
         },
       },
     },
+
+    '.cta': {
+      display: 'grid',
+      placeItems: 'center',
+      padding: '100px 0',
+      background: `url(${queriesBG}), linear-gradient(to right, #add8e645, #add8e645) no-repeat`,
+      [breakpoints.down(660)]: {
+        padding: '70px 25px',
+      },
+
+      button: {
+        alignSelf: 'center',
+        svg: {
+          width: '13px',
+          marginLeft: '8px'
+        }
+      }
+    }
   })
 );
