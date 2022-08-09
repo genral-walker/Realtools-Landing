@@ -9,14 +9,7 @@ export const LearnDetailsWrapper = styled(Card)(
 
     '.MuiCardMedia-root.MuiCardMedia-img ': {
       width: '98%',
-      margin: '2px auto 17px',
-      [breakpoints.down('sm')]: {
-        width: '94%',
-      },
-      [breakpoints.down('425')]: {
-        margin: '0 auto 17px',
-        width: '100%',
-      },
+      margin: '1% auto 17px'
     },
 
     '.MuiCardContent-root': {
