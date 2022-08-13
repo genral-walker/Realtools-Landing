@@ -5,6 +5,8 @@ import queriesBG from 'assets/icons/queries-bg.svg';
 import featuredDecoratorBG from 'assets/icons/featured-decorator.svg';
 import sellDecoratorBG from 'assets/icons/sell-decorator.svg';
 import buySellDecoratorBG from 'assets/icons/sell-buy-bg-decorator.svg';
+import learnBG from 'assets/icons/learn-bg.svg';
+import learnDecoratorRight from 'assets/icons/learn-decorator-right.svg';
 
 export const HomeWrapper = styled(Box)(
   ({ theme: { breakpoints, palette } }) => ({
@@ -360,7 +362,54 @@ export const HomeWrapper = styled(Box)(
       marginTop: '-11%',
       position: 'relative',
       zIndex: 600,
+      '&::before': {
+        content: '""',
+        position: 'absolute',
+        zIndex: -500,
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        background: `url(${learnBG}) no-repeat right bottom`,
+        backgroundSize: '95%',
+        [breakpoints.up('xl')]: {
+          backgroundSize: '90%',
+          backgroundPosition: 'right 50px',
+        },
+        [breakpoints.down('lg')]: {
+          backgroundSize: 'fill',
+          backgroundPosition: 'center',
+        },
+        [breakpoints.down('sm')]: {
+          display: 'none',
+        },
+      },
+      '&::after': {
+        content: '""',
+        position: 'absolute',
+        zIndex: -500,
+        top: '140px',
+        right: 0,
+        width: '180px',
+        height: '180px',
+        background: `url(${learnDecoratorRight}) no-repeat right`,
+        backgroundSize: 'fill',
+        [breakpoints.down('sm')]: {
+          display: 'none',
+        },
+      },
+      '.learn-decorator-left': {
+        position: 'absolute',
+        zIndex: -500,
+        top: '580px',
+        left: '-45px',
+        width: '150px',
+        height: '230px',
+        [breakpoints.down('sm')]: {
+          display: 'none',
+        },
 
+      },
       [breakpoints.down('1000')]: {
         borderRadius: '180px 0px 0px 0px',
       },

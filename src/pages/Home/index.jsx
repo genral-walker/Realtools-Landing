@@ -26,6 +26,7 @@ import 'swiper/css/pagination';
 import sellHero from 'assets/images/sell-hero.svg';
 import buyHero from 'assets/images/buy-hero.svg';
 import { ReactComponent as RightArrowIcon } from 'assets/icons/arrow.svg';
+import { ReactComponent as LearnDecoratorLeft } from 'assets/icons/learn-decorator-left.svg';
 
 export const Home = () => {
   const theme = useTheme();
@@ -167,6 +168,7 @@ export const Home = () => {
           </Stack>
 
           <Box component={'section'} className="learn-section">
+            <LearnDecoratorLeft className="learn-decorator-left" />
             <CustomHeading variant={'subHead'}>
               Learn Everything About Buying, Selling, and Operating a Self
               Storage
