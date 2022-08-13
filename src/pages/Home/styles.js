@@ -2,6 +2,9 @@ import { styled, Box } from '@mui/material';
 import Hero from 'assets/images/Hero.jpg';
 import activeBG from 'assets/images/listings-decorator.jpg';
 import queriesBG from 'assets/icons/queries-bg.svg';
+import featuredDecoratorBG from 'assets/icons/featured-decorator.svg';
+import sellDecoratorBG from 'assets/icons/sell-decorator.svg';
+import buySellDecoratorBG from 'assets/icons/sell-buy-bg-decorator.svg';
 
 export const HomeWrapper = styled(Box)(
   ({ theme: { breakpoints, palette } }) => ({
@@ -73,6 +76,8 @@ export const HomeWrapper = styled(Box)(
     '.featured': {
       background: palette.common.white,
       padding: '100px 20px 20px',
+      position: 'relative',
+      overflow: 'hidden',
 
       '.swiper.swiper-initialized': {
         margin: '60px 20px 0',
@@ -80,6 +85,21 @@ export const HomeWrapper = styled(Box)(
         '.swiper-pagination-bullet': {
           width: '16px',
           height: '16px',
+        },
+      },
+
+      '&::before': {
+        content: '""',
+        position: 'absolute',
+        top: '-25px',
+        left: '-40px',
+        width: '230px',
+        height: '230px',
+        background: `url(${featuredDecoratorBG}) no-repeat`,
+        backgroundSize: 'fill',
+        transform: 'rotate(90deg)',
+        [breakpoints.down(750)]: {
+          display: 'none',
         },
       },
     },
@@ -165,6 +185,21 @@ export const HomeWrapper = styled(Box)(
         borderRadius: '0px 0px 300px 0px',
         overflow: 'hidden',
         height: '700px',
+        position: 'relative',
+        '&::before': {
+          content: '""',
+          position: 'absolute',
+          bottom: '-60px',
+          left: '-10px',
+          width: '230px',
+          height: '230px',
+          background: `url(${sellDecoratorBG}) no-repeat`,
+          backgroundSize: 'fill',
+          transform: 'rotate(5deg)',
+          [breakpoints.down('800')]: {
+            display: 'none',
+          },
+        },
         [breakpoints.down('lg')]: {
           height: '550px',
         },
@@ -232,7 +267,24 @@ export const HomeWrapper = styled(Box)(
 
     '.buy-section': {
       height: '700px',
-
+      position: 'relative',
+      '&::before': {
+        content: '""',
+        position: 'absolute',
+        top: '-20vw',
+        left: '0',
+        width: '100%',
+        height: '135%',
+        zIndex: '50',
+        background: `url(${buySellDecoratorBG}) no-repeat`,
+        backgroundSize: 'fill',
+        [breakpoints.down('lg')]: {
+          top: '-15vw',
+        },
+        [breakpoints.down(720)]: {
+          top: '-70vw',
+        },
+      },
       [breakpoints.down('lg')]: {
         height: '550px',
       },
