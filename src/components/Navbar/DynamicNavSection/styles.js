@@ -2,7 +2,7 @@ import { AppBar, styled } from '@mui/material';
 import { lime } from '@mui/material/colors';
 
 export const DynamicNavWrapper = styled(AppBar)(
-  ({ theme: { palette }, mobile }) => ({
+  ({ theme: { palette } }) => ({
     backgroundColor: 'unset',
     padding: '10px 20px 0',
     color: palette.common.white,

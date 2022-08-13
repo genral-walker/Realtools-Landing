@@ -17,7 +17,7 @@ export const ButtonWrapper = styled(Button)(
         ? '15px 55px'
         : '10px 27px',
 
-    borderRadius: '5px',
+    borderRadius: '10px',
     textTransform: 'unset',
     [breakpoints.down('360')]: {
       fontSize: buttonsize === 'large' ? '13px' : '',

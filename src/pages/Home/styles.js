@@ -352,6 +352,10 @@ export const HomeWrapper = styled(Box)(
       placeItems: 'center',
       padding: '100px 0',
       background: `url(${queriesBG}), linear-gradient(to right, #add8e645, #add8e645) no-repeat`,
+      backgroundSize: 'cover',
+      [breakpoints.down('md')]: {
+        backgroundSize: 'contain',
+      },
       [breakpoints.down(660)]: {
         padding: '70px 25px',
       },
@@ -360,9 +364,9 @@ export const HomeWrapper = styled(Box)(
         alignSelf: 'center',
         svg: {
           width: '13px',
-          marginLeft: '8px'
-        }
-      }
-    }
+          marginLeft: '8px',
+        },
+      },
+    },
   })
 );

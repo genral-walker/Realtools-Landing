@@ -10,6 +10,7 @@ import {
   CustomButton,
   CustomCTA,
   CustomHeading,
+  Footer,
   Form,
   LearnDetails,
   Navbar,
@@ -209,6 +210,8 @@ export const Home = () => {
           </Box>
         </Box>
       </Box>
+
+      <Footer />
     </HomeWrapper>
   );
 };
