@@ -273,6 +273,9 @@ export const HomeWrapper = styled(Box)(
       },
       button: {
         color: palette.common.white + ' !important',
+        [breakpoints.between(720, 782)]: {
+          marginBottom: '50px !important',
+        },
       },
       img: {
         width: '550px',
@@ -312,11 +315,11 @@ export const HomeWrapper = styled(Box)(
       [breakpoints.down('800')]: {
         borderRadius: '150px 0px 0px 0px',
       },
+      [breakpoints.down('sm')]: {
+        padding: '90px 25px 60px',
+      },
       [breakpoints.down('580')]: {
         borderRadius: '0',
-      },
-      [breakpoints.down('380')]: {
-        padding: '90px 25px 60px',
       },
       [breakpoints.down('340')]: {
         padding: '90px 20px 60px',
@@ -355,6 +358,9 @@ export const HomeWrapper = styled(Box)(
       backgroundSize: 'cover',
       [breakpoints.down('md')]: {
         backgroundSize: 'contain',
+      },
+      [breakpoints.between('850', 'md')]: {
+        padding: '100px 20px',
       },
       [breakpoints.down(660)]: {
         padding: '70px 25px',

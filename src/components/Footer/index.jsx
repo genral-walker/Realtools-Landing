@@ -10,8 +10,6 @@ import {
   TextField,
   Select,
   MenuItem,
-  InputLabel,
-  FormControl,
 } from '@mui/material';
 import { CustomButton } from 'components';
 import { FooterWrapper } from './styles';
@@ -24,8 +22,13 @@ import { ReactComponent as GlobeIcon } from 'assets/icons/globe.svg';
 
 export const Footer = () => {
   return (
-    <FooterWrapper component={'footer'} container spacing={5}>
-      <Grid item xs={4}>
+    <FooterWrapper
+      component={'footer'}
+      container
+      rowSpacing={{ xs: 5, md: 3 }}
+      columnSpacing={3}
+    >
+      <Grid item xs={12} sm={6} md={5} lg={4}>
         <Stack spacing={1} direction="row">
           <FooterHeroIcon />
           <Typography variant="h3" alignSelf={'end'}>
@@ -33,7 +36,7 @@ export const Footer = () => {
           </Typography>
         </Stack>
 
-        <Typography variant="body2" mt={2} mb={4.5}>
+        <Typography variant="body2" mt={2} mb={{ xs: 2, sm: 4.5 }}>
           Nam posuere accumsan porta. Integer id orci sed ante tincidunt
           tincidunt sit amet sed libero.
         </Typography>
@@ -43,7 +46,7 @@ export const Footer = () => {
         </Typography>
       </Grid>
 
-      <Grid item xs={2}>
+      <Grid item xs={12} sm={6} md={3} lg={2}>
         <Typography variant="h4" textTransform={'uppercase'}>
           Quick Links
         </Typography>
@@ -73,7 +76,7 @@ export const Footer = () => {
         </Box>
       </Grid>
 
-      <Grid item xs={3}>
+      <Grid item xs={12} sm={6} md={4} lg={3}>
         <Typography variant="h4" textTransform={'uppercase'}>
           Newsletter
         </Typography>
@@ -92,7 +95,7 @@ export const Footer = () => {
         </Box>
       </Grid>
 
-      <Grid item xs={3}>
+      <Grid item xs={12} sm={6} md={3} lg={3}>
         <Typography variant="h4" textTransform={'uppercase'}>
           Let’s get social
         </Typography>

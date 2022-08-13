@@ -6,6 +6,12 @@ export const FooterWrapper = styled(Grid)(
     background: palette.common.white,
     color: palette.text.primary,
     marginTop: '0px',
+    [breakpoints.down(1000)]: {
+      padding: '55px 40px 45px',
+    },
+    [breakpoints.down('sm')]: {
+      padding: '55px 25px 45px',
+    },
     '& *': {
       fontFamily: 'Roboto, sans-serif !important',
     },
@@ -28,24 +34,32 @@ export const FooterWrapper = styled(Grid)(
           },
         },
         '.MuiTypography-root.MuiListItemText-primary': {
-          fontSize: '14px !important',
+          fontSize: '15px !important',
         },
       },
 
       '&:first-of-type': {
+        paddingTop: '14px',
+        [breakpoints.down('md')]: {
+          paddingTop: '34px',
+        },
         h3: {
           fontSize: '22px',
           fontWeight: 700,
           fontFamily: 'Poppins, sans-serif !important',
         },
-        '&>p:first-of-type': {
-          lineHeight: '24px',
+        '&>p': {
+          fontSize: '15px !important',
+          '&:first-of-type': {
+            lineHeight: '24px',
+          },
         },
       },
 
       '&:nth-of-type(3)': {
         '.MuiInputLabel-root.MuiInputLabel-formControl.MuiFormLabel-root': {
-          fontSize: '14px !important',
+          fontSize: '12px !important',
+          margin: '4px 0 0 4px',
         },
         '.MuiOutlinedInput-root.MuiInputBase-root.MuiInputBase-formControl': {
           borderRadius: '10px',
@@ -53,6 +67,8 @@ export const FooterWrapper = styled(Grid)(
         button: {
           marginTop: '10px',
           color: palette.common.white + ' !important',
+          display: 'block',
+          fontSize: '15px !important',
         },
       },
       '&:nth-of-type(4)': {
