@@ -1,4 +1,5 @@
 import { Grid, styled } from '@mui/material';
+import footerDecorator from 'assets/icons/footer-decorator.svg';
 
 export const FooterWrapper = styled(Grid)(
   ({ theme: { palette, breakpoints } }) => ({
@@ -6,6 +7,24 @@ export const FooterWrapper = styled(Grid)(
     background: palette.common.white,
     color: palette.text.primary,
     marginTop: '0px',
+    position: 'relative',
+    '&::before, &::after': {
+      content: '""',
+      position: 'absolute',
+      bottom: 0,
+      right: '15px',
+      width: '270px',
+      height: '220px',
+      background: `url(${footerDecorator}) no-repeat bottom`,
+      backgroundSize: 'fill',
+    },
+    '&::after': {
+      left: '40px !important',
+      transform: 'rotateY(180deg)',
+      [breakpoints.down('sm')]: {
+        display: 'none',
+      },
+    },
     [breakpoints.down(1000)]: {
       padding: '55px 40px 45px',
     },

@@ -1,10 +1,19 @@
 import { Stack, styled } from '@mui/material';
+import ctaMailDecorator from 'assets/icons/cta-mail-decorator.svg';
 
 export const CTAWrapper = styled(Stack)(
   ({ theme: { palette, breakpoints } }) => ({
     transform: 'translateX(-20px)',
-    [breakpoints.down('sm')]: {
-      transform: 'translateX(0px)',
+    position: 'relative',
+    '&::after': {
+      content: '""',
+      position: 'absolute',
+      top: '-45px',
+      right: '70px',
+      width: '120px',
+      height: '100px',
+      background: `url(${ctaMailDecorator}) no-repeat`,
+      backgroundSize: 'fill',
     },
     '& > svg': {
       alignSelf: 'end',
@@ -12,6 +21,9 @@ export const CTAWrapper = styled(Stack)(
       [breakpoints.down('sm')]: {
         display: 'none',
       },
+    },
+    [breakpoints.down('sm')]: {
+      transform: 'translateX(0px)',
     },
     '.MuiPaper-root.MuiCard-root': {
       boxShadow: '0px 30px 40px rgba(24, 73, 198, 0.1)',
