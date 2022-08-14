@@ -7,6 +7,7 @@ import sellDecoratorBG from 'assets/icons/sell-decorator.svg';
 import buySellDecoratorBG from 'assets/icons/sell-buy-bg-decorator.svg';
 import learnBG from 'assets/icons/learn-bg.svg';
 import learnDecoratorRight from 'assets/icons/learn-decorator-right.svg';
+import CTADecoratorBG from 'assets/icons/queries-decorator.svg';
 
 export const HomeWrapper = styled(Box)(
   ({ theme: { breakpoints, palette } }) => ({
@@ -408,7 +409,6 @@ export const HomeWrapper = styled(Box)(
         [breakpoints.down('sm')]: {
           display: 'none',
         },
-
       },
       [breakpoints.down('1000')]: {
         borderRadius: '180px 0px 0px 0px',
